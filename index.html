@@ -202,7 +202,15 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
   .body{grid-template-columns:minmax(0,1fr);gap:32px}
   nav.index{position:static;display:none}
   .hero{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:36px 28px}
-  .hero .photo{order:-1;max-width:180px}
+  .hero{grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:0;align-items:center}
+  .hero>div{display:contents}
+  .hero>div>*{grid-column:1}
+  .hero .role,.hero .actions,.hero>div>.label:first-child{grid-column:1/-1}
+  .hero>div>.label:first-child{margin-bottom:14px}
+  .hero .role{font-size:17px}
+  .hero .photo{grid-column:2;grid-row:2/4;align-self:center;width:clamp(96px,28vw,150px)}
+  .hero .photo img{aspect-ratio:1/1;border-radius:50%;object-position:50% 18%}
+  .hero h1{font-size:clamp(38px,10vw,64px)}
   .ticker{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ticker div:nth-child(3){padding-left:0;border-left:0}
   .ticker div:nth-child(n+3){border-top:1px solid var(--rule)}
@@ -235,7 +243,7 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
     <p class="label">Marketing Manager · Integrated B2B &amp; B2C marketing · ABM, demand generation &amp; events</p>
     <h1>Harun Marwaha</h1>
     <p class="label sub-name">8+ years in marketing · Based in Dubai · Open to roles in the UAE</p>
-    <p class="role">I turn business goals into campaigns, from account-based programs for enterprise sales teams to social commerce for consumer brands, and report on what they return. At <b>Wipro</b> I worked with account teams across the GCC, the Americas, Europe and APMEA on account-based marketing, demand generation and sales enablement, and owned a USD 1.6M LinkedIn media budget. Before that, at <b>Inception Business Services</b>, I rose from Marketing Project Manager to Marketing Project Director, won clients, led teams of up to 10 and ran their launches, paid media and content.</p>
+    <p class="role">I turn business goals into campaigns, from account-based programs for enterprise sales teams to social commerce for consumer brands. At <b>Wipro</b> I worked with account teams across the GCC, the Americas, Europe and APMEA on account-based marketing, demand generation and sales enablement, and owned a USD 1.6M LinkedIn media budget. Before that, at <b>Inception Business Services</b>, I rose from Marketing Project Manager to Marketing Project Director, won clients, led teams of up to 10 and ran their launches, paid media and content.</p>
     <div class="actions">
       <a class="btn" href="Harun_Marwaha_Resume.pdf" download>Download resume (PDF)</a>
       <a class="btn ghost" href="#contact">Contact me</a>
