@@ -6,7 +6,7 @@
 <title>Harun Marwaha | Marketing Manager, ABM, Demand Generation &amp; Events | Dubai, UAE</title>
 <meta name="description" content="Portfolio of Harun Marwaha, Marketing Manager in Dubai with 8+ years in B2B and B2C marketing: account-based marketing, demand generation and global events. USD 100M in qualified pipeline at Wipro.">
 <meta property="og:title" content="Harun Marwaha | Marketing Manager portfolio">
-<meta property="og:description" content="ABM, demand generation and events. USD 100M qualified pipeline, USD 700M+ in deal wins supported. Open to roles in the UAE.">
+<meta property="og:description" content="ABM, demand generation, events and everything in between. USD 100M qualified pipeline, USD 700M+ in deal wins supported. Open to roles in the UAE.">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="img/headshot.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -232,78 +232,208 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
   .wall img{transition:transform .35s ease}
   .wall button:hover img{transform:scale(1.025)}
 }
+
+/* ================= v3 one-page layout ================= */
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+.topbar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--rule);margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)))}
+.topbar .in{max-width:1180px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px));min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font:700 18px var(--f-display);color:var(--accent);text-decoration:none}
+.topnav{display:flex;align-items:center;gap:2px}
+.topnav a{min-height:44px;display:inline-flex;align-items:center;padding:0 12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.topnav a:hover{color:var(--accent)}
+.topnav .btn{min-height:42px;margin-left:8px;padding:0 18px;color:var(--accent-ink)}
+.topnav .btn:hover{color:var(--accent-ink)}
+.btn{white-space:nowrap}
+.pills{display:none}
+.pill-resume{display:none!important}
+.hero3{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center;padding-block:64px 40px}
+.hero3 h1{font-size:clamp(42px,6.6vw,84px);font-weight:700;letter-spacing:-.04em;line-height:.95;color:var(--accent);margin-top:14px}
+.hero3 .lede{margin-top:18px;font-size:22px;line-height:1.45;max-width:30em}
+.hero3 .photo{margin:0;width:260px}
+.hero3 .photo img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 18%;border-radius:50%}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.stats div{background:var(--surface);border-radius:12px;padding:20px 22px}
+.stats strong{display:block;font:700 clamp(26px,3vw,36px)/1.05 var(--f-display);letter-spacing:-.02em}
+.stats small{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+.sec{padding-top:72px;display:flex;flex-direction:column;gap:22px;scroll-margin-top:84px}
+.sec>h2,.sec-head h2{font:700 clamp(30px,3.6vw,40px)/1.1 var(--f-display);letter-spacing:-.03em}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px}
+.filters{display:flex;gap:8px}
+.filters button{min-height:40px;padding:0 18px;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);font:600 14px var(--f-body);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.tile{min-width:0;scroll-margin-top:84px}
+.tile[hidden]{display:none}
+.tile.open{grid-column:1/-1}
+.tile-head{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;width:100%;height:100%;background:var(--surface);border-radius:12px;overflow:hidden;transition:transform .15s ease}
+.tile-head:hover{transform:translateY(-2px)}
+.tile-head:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.tile.open .tile-head{display:none}
+.thumb{display:block;width:100%;height:170px;object-fit:cover;background:var(--plate)}
+.thumb.ph{display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:15px}
+.t-body{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;flex-grow:1}
+.t-tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.t-title{font:700 17px/1.3 var(--f-display)}
+.t-stat{margin-top:auto;padding-top:10px;font:700 24px var(--f-display);color:var(--accent);letter-spacing:-.02em}
+.t-stat small{font:500 13px var(--f-body);color:var(--muted);letter-spacing:0}
+.t-open{font-size:14px;font-weight:600;color:var(--accent)}
+.panel{background:var(--surface);border:2px solid var(--accent);border-radius:12px;overflow:hidden}
+.p-top{display:flex;flex-wrap:wrap}
+.p-img{flex:1 1 320px;max-width:440px;min-height:300px;object-fit:cover;display:block;background:var(--plate)}
+.p-text{flex:999 1 420px;min-width:0;padding:28px;display:flex;flex-direction:column;gap:14px}
+.p-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.p-head h3{margin-top:6px;font:700 clamp(22px,2.4vw,28px)/1.15 var(--f-display)}
+.close{flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:1px solid var(--rule);background:var(--surface);color:var(--ink);font:500 22px var(--f-body);cursor:pointer}
+.close:hover{border-color:var(--accent);color:var(--accent)}
+.brief{font-size:16px;line-height:1.55;color:var(--ink)}
+.pts{margin:0;padding-left:20px;font-size:15px;line-height:1.7}
+.p-nums{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:14px}
+.p-nums strong{display:block;font:700 26px var(--f-display);color:var(--accent);letter-spacing:-.02em}
+.p-nums small{font-size:13px;color:var(--muted)}
+.more{align-self:flex-start;min-height:44px;padding:0 20px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);font:600 15px var(--f-body);border-radius:2px;cursor:pointer}
+.more:hover{background:var(--accent);color:var(--accent-ink)}
+.p-more{border-top:1px solid var(--rule);padding:28px;display:flex;flex-direction:column;gap:24px}
+.p-more>.strip{display:none}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border-radius:12px;padding:24px;border-top:4px solid var(--accent);display:flex;flex-direction:column;gap:8px}
+.card.muted{border-top-color:var(--rule)}
+.how .card{border-top:0;border-left:0}
+.step{width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:inline-flex;align-items:center;justify-content:center;font:700 18px var(--f-display);margin-bottom:4px}
+.card .when{font-size:13px;font-weight:600;color:var(--muted)}
+.card h3{font:700 21px var(--f-display)}
+.card .roles{font-size:15px;line-height:1.6}
+.card .roles b{font-weight:700}
+.card .sum{font-size:14px;color:var(--muted)}
+.card details{margin-top:4px}
+.card summary{cursor:pointer;min-height:40px;display:inline-flex;align-items:center;font-weight:600;color:var(--accent);font-size:14px}
+.card details ul{margin-top:6px;font-size:14px}
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.edu div{background:var(--surface);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:center}
+.edu .ic{flex:0 0 56px;height:56px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.edu h3{font:700 19px var(--f-display)}
+.edu p{font-size:15px}
+.edu small{font-size:13px;font-weight:600;color:var(--muted)}
+.skills4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.skills4 h3{font:700 18px var(--f-display);padding-top:12px;border-top:3px solid var(--accent);margin-bottom:6px}
+.skills4 ul{margin:0;padding:0;list-style:none;font-size:15px;line-height:1.75}
+.tools{font-size:15px;line-height:1.75;color:var(--muted)}
+.tools b{color:var(--ink);font-weight:600}
+.band{margin-top:80px;background:var(--accent);color:var(--accent-ink);border-radius:16px;padding:44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;scroll-margin-top:84px}
+.band h2{font:700 clamp(28px,3.2vw,36px)/1.15 var(--f-display);letter-spacing:-.02em;max-width:560px}
+.band .actions{margin-top:0}
+.band .btn{background:var(--accent-ink);color:var(--accent);border-color:var(--accent-ink)}
+.band .btn.ghost{background:transparent;color:var(--accent-ink);border-color:var(--accent-ink)}
+.band .btn:hover{opacity:.9}
+.band p{width:100%;font-size:15px;opacity:.9}
+.band .copy{background:transparent;border-color:var(--accent-ink);color:var(--accent-ink)}
+footer{margin-top:40px}
+@media (max-width:960px){
+  .topnav{display:none}
+  .pill-resume{display:inline-flex!important;min-height:40px;padding:0 16px;flex:0 0 auto!important}
+  .topbar .in{min-height:58px}
+  .pills{display:flex;gap:6px;overflow-x:auto;padding:0 max(16px,env(safe-area-inset-left,0px)) 10px;scrollbar-width:none}
+  .pills a{flex:0 0 auto;min-height:36px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:var(--surface);border:1px solid var(--rule);color:var(--ink);text-decoration:none;font-size:14px;font-weight:600}
+  .hero3{grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:0;padding-block:28px 28px}
+  .hero3>div{display:contents}
+  .hero3>div>*{grid-column:1}
+  .hero3 .label,.hero3 .lede,.hero3 .actions{grid-column:1/-1}
+  .hero3 h1{margin-top:12px;font-size:clamp(38px,11vw,60px)}
+  .hero3 .photo{grid-column:2;grid-row:2;width:clamp(96px,28vw,150px);align-self:center}
+  .hero3 .lede{font-size:17px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .stats div{padding:16px}
+  .stats strong{font-size:22px}
+  .stats small{font-size:13px}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cards,.skills4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sec{padding-top:52px}
+}
+@media (max-width:560px){
+  .tiles{grid-template-columns:minmax(0,1fr);gap:12px}
+  .tile-head{flex-direction:row;min-height:110px}
+  .thumb{flex:0 0 110px;width:110px;height:auto;min-height:110px}
+  .t-body{padding:12px 14px;gap:4px}
+  .t-title{font-size:15px}
+  .t-stat{font-size:19px;padding-top:4px}
+  .t-open{display:none}
+  .p-img{max-width:none;min-height:180px;max-height:220px}
+  .p-text,.p-more{padding:20px}
+  .cards,.skills4,.edu{grid-template-columns:minmax(0,1fr)}
+  .band{padding:28px}
+  .hero3 .actions .btn{flex:1 1 0;padding:0 12px}
+}
 </style>
 </head>
 <body>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="#top">Harun Marwaha</a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <a class="btn" href="Harun_Marwaha_Resume.pdf" download>Resume</a>
+    </nav>
+    <a class="btn pill-resume" href="Harun_Marwaha_Resume.pdf" download>Resume</a>
+  </div>
+  <nav class="pills" aria-label="Sections"><a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+</header>
 
-<div class="wrap">
+<div class="wrap" id="top">
 
-<header class="hero">
+<header class="hero3">
   <div>
-    <p class="label">Marketing Manager · Integrated B2B &amp; B2C marketing · ABM, demand generation &amp; events</p>
+    <p class="label">Marketing Manager · Dubai · Open to roles in the UAE</p>
     <h1>Harun Marwaha</h1>
-    <p class="label sub-name">8+ years in marketing · Based in Dubai · Open to roles in the UAE</p>
-    <p class="role">I turn business goals into campaigns, from account-based programs for enterprise sales teams to social commerce for consumer brands. At <b>Wipro</b> I worked with account teams across the GCC, the Americas, Europe and APMEA on account-based marketing, demand generation and sales enablement, and owned a USD 1.6M LinkedIn media budget. Before that, at <b>Inception Business Services</b>, I rose from Marketing Project Manager to Marketing Project Director, won clients, led teams of up to 10 and ran their launches, paid media and content.</p>
+    <p class="lede">8+ years turning business goals into B2B and B2C campaigns. ABM, demand generation, events and everything in between.</p>
     <div class="actions">
-      <a class="btn" href="Harun_Marwaha_Resume.pdf" download>Download resume (PDF)</a>
-      <a class="btn ghost" href="#contact">Contact me</a>
-      <span class="meta"><a href="https://www.linkedin.com/in/harunmarwaha" target="_blank" rel="noopener">LinkedIn</a> · Dubai, UAE</span>
+      <a class="btn" href="#work">See my work</a>
+      <a class="btn ghost" href="Harun_Marwaha_Resume.pdf" download>Download resume</a>
     </div>
   </div>
   <figure class="photo"><img src="img/headshot.webp" alt="Harun Marwaha" width="640" height="800"></figure>
 </header>
 
-<section class="ticker" aria-label="Headline results">
-  <div><strong class="num">USD 100M</strong><small>qualified pipeline from demand generation at Wipro</small></div>
-  <div><strong class="num">USD 700M+</strong><small>in deal wins (total contract value) supported with account-based marketing at Wipro</small></div>
-  <div><strong class="num">7.5x</strong><small>return on ad spend on social for a global footwear brand</small></div>
-  <div><strong class="num">30%</strong><small>of agency revenue came from client accounts I managed</small></div>
+<section class="stats" aria-label="Headline results">
+  <div><strong>USD 100M</strong><small>qualified pipeline at Wipro</small></div>
+  <div><strong>USD 700M+</strong><small>deal wins supported with ABM</small></div>
+  <div><strong>7.5x</strong><small>return on ad spend, footwear brand</small></div>
+  <div><strong>30%</strong><small>of agency revenue from my accounts</small></div>
 </section>
 
-<div class="body">
-  <nav class="index" aria-label="Case studies">
-    <p class="label">At Wipro</p>
-    <a href="#wipro"><span>Wipro</span><span>Tech</span></a>
-    <p class="label sub">At Inception</p>
-    <a href="#footwear"><span>Global footwear brand</span><span>Retail</span></a>
-    <a href="#fashion"><span>Slow-fashion label</span><span>Fashion</span></a>
-    <a href="#cloud"><span>Cloud storage partners</span><span>Technology</span></a>
-    <a href="#packaging"><span>Multinational conglomerate</span><span>Manufacturing</span></a>
-    <a href="#industrial"><span>Industrial manufacturer</span><span>Manufacturing</span></a>
-    <a href="#hr"><span>HR consultancy</span><span>HR</span></a>
-    <a href="#network"><span>Executive network</span><span>B2B</span></a>
-    <p class="label sub">More</p>
-    <a href="#method"><span>How I work</span><span></span></a>
-    <a href="#cv"><span>Experience</span><span></span></a>
-  </nav>
-
-  <main>
-
-  <!-- ================= Wipro ================= -->
-  <section class="case" id="wipro">
-    <div class="strip">
-      <span class="label">Wipro · Campaign Specialist → Marketing Manager</span>
-      <span class="label"><i>Sector</i> Enterprise technology services</span>
-      <span class="label"><i>When</i> Jan 2023 – May 2026</span>
-      <span class="label"><i>Markets</i> GCC, Americas, Europe, APMEA</span>
+<section class="sec" id="work">
+  <div class="sec-head">
+    <h2>Selected work</h2>
+    <div class="filters" role="group" aria-label="Filter work">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="b2b" aria-pressed="false">B2B</button>
+      <button type="button" data-f="b2c" aria-pressed="false">B2C</button>
     </div>
-    <h2>ABM, demand generation and global events that built <em>USD 100M in pipeline</em></h2>
-    <div class="cols">
+  </div>
+  <div class="tiles">
+    <article class="tile" id="wipro" data-seg="b2b">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-wipro">
+        <img class="thumb" src="img/w-aviation.webp" alt="" loading="lazy" width="720" height="480">
+        <span class="t-body"><span class="t-tag">Wipro · Enterprise technology</span><span class="t-title">ABM, demand generation and global events</span><span class="t-stat">USD 100M <small>pipeline</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-wipro" hidden>
+        <div class="p-top">
+          <img class="p-img" src="img/w-aviation.webp" alt="" loading="lazy">
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">Wipro · Enterprise technology</p><h3>ABM, demand generation and global events</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">Make marketing useful to the people selling, from GCC account managers on strategic pursuits to regional demand generation teams.</p>
+            <ul class="pts"><li>ABM and go-to-market plans with GCC account managers</li><li>Davos, MWC Barcelona, CES, AWS re:Invent and the India AI Impact Summit</li><li>300+ LinkedIn campaigns across seven industries</li></ul>
+            <div class="p-nums"><div><strong>USD 100M</strong><small>qualified pipeline</small></div><div><strong>USD 700M+</strong><small>deal wins supported</small></div><div><strong>−27%</strong><small>cost per click, year on year</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<div class="cols">
       <div>
         <h3>The brief</h3>
         <p>Wipro sells AI, cybersecurity, cloud, engineering and business process services to large enterprises. My job was to make marketing useful to the people selling: GCC account managers working strategic pursuits, and regional business units in the Americas, Europe and APMEA running demand generation.</p>
       </div>
       <div>
         <h3>What I did</h3>
-        <ul class="did groups">
-          <li><b>ABM &amp; sales enablement:</b> ABM and go-to-market plans with GCC account managers for hunting and farming accounts, including a pursuit plan for one of the GCC's largest energy and chemicals producers.</li>
-          <li><b>Demand generation:</b> multi-channel programs across paid, owned and earned channels that contributed USD 100M in qualified pipeline.</li>
-          <li><b>Events:</b> Davos, MWC Barcelona (two editions), CES, AWS re:Invent and the India AI Impact Summit, plus webinars and closed-door leadership panels.</li>
-          <li><b>Paid media &amp; LinkedIn:</b> 300+ campaigns across seven industries for director-level audiences, localized for each region.</li>
-          <li><b>Content &amp; social:</b> C-suite thought leadership, the content calendar and a global social media framework, plus social listening and reporting.</li>
-          <li><b>Operations &amp; AI:</b> annual plan and governance, agency management, launch time cut from four days to under 24 hours, Microsoft 365 Copilot in the workflow.</li>
-        </ul>
-        <details class="all"><summary>Show all 10 points</summary><ul class="did">
+        <ul class="did">
           <li>Built ABM plans, go-to-market plans and sales enablement with account managers, for both hunting and farming accounts, and gave regional business units the frameworks, messaging and assets to run their own campaigns.</li>
           <li>Built a pursuit marketing plan for one of the GCC's largest energy and chemicals producers, covering every online and offline touchpoint before the deal's renewal phase: regional events, customized newsletters and client experience visits.</li>
           <li>Owned the annual marketing plan and its governance, splitting effort between always-on demand generation and event-led pushes.</li>
@@ -314,7 +444,7 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
           <li>Ran social listening and community management, tracking brand mentions, user-generated content and real-time trends for reactive content, and reported monthly, quarterly and annual results to internal leadership.</li>
           <li>Managed LinkedIn programs across banking and financial services, energy, aviation, manufacturing, healthcare, consumer and technology, segmenting strategies by audience and sector with data insights and turning AI, cloud and cybersecurity offers into stories for director-level audiences, localized for each region.</li>
           <li>Streamlined campaign execution, cutting launch time from four days to under 24 hours, and built generative AI (Microsoft 365 Copilot) into content drafting and campaign analysis, with human review on brand, accuracy and strategy.</li>
-        </ul></details>
+        </ul>
       </div>
     </div>
     <div class="ledger">
@@ -366,55 +496,41 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
         <figure><button type="button" data-cap="Card 6 of 6: Where do you stand? Download the report"><img src="img/c938653406-5.webp" alt="Card 6: Where do you stand? Download the report" loading="lazy" width="640" height="640"></button><figcaption>6 · Call to action</figcaption></figure>
       </div>
     </div>
-  </section>
-
-  <!-- ================= Inception era ================= -->
-  <section class="case era" id="inception">
-    <div class="strip">
-      <span class="label">Inception Business Services · Marketing Project Manager → Senior Marketing Project Manager → Marketing Project Director</span>
-      <span class="label"><i>Sector</i> Marketing &amp; advertising agency</span>
-      <span class="label"><i>When</i> Apr 2018 – Jan 2023</span>
-      <span class="label"><i>Based</i> India</span>
-    </div>
-    <h2>Agency work for <em>B2B and consumer brands</em></h2>
-    <div class="metrics era-metrics">
-      <div class="metric"><strong class="num">30%</strong><small>of agency revenue from accounts I managed</small></div>
-      <div class="metric"><strong class="num">Up to 10</strong><small>people in project teams I led and mentored</small></div>
-      <div class="metric"><strong class="num">4</strong><small>markets: India, Europe, the US and the UAE</small></div>
-    </div>
-    <ul class="did era-did">
-      <li><b>Business development:</b> brought in new clients with pitches, proposals and strategic recommendations.</li>
-      <li><b>Delivery:</b> turned client briefs into campaign plans and monthly deliverables, managing teams across project management, campaign management, research and creative.</li>
-      <li><b>Brand strategy:</b> ran positioning, voice-and-tone, value-proposition and ideal customer profile (ICP) workshops for a school franchise group, fashion and footwear brands, a law firm and an executive search firm; built guidelines, buyer personas and decision journeys, and acted as brand guardian across all deliverables.</li>
-      <li><b>Campaigns:</b> online and offline campaigns, brand and product launches, collaborations and events, paid media, influencer marketing, content and SEO strategy across clients.</li>
-      <li><b>Analytics:</b> tracked campaigns with analytics and social tools to improve results month on month.</li>
-      <li><b>Sales enablement:</b> company profiles, leadership profiles, case studies and proposals for UAE clients.</li>
-    </ul>
-    <p class="era-intro">The case studies below are from this role. Client names are withheld.</p>
-  </section>
-
-  <!-- ================= Footwear ================= -->
-  <section class="case" id="footwear">
-    <div class="strip">
-      <span class="label">Global footwear brand · India</span>
-      <span class="label"><i>Sector</i> Consumer retail, direct-to-consumer</span>
-      <span class="label"><i>Channels</i> Paid social, events, email, SMS, WhatsApp</span>
-    </div>
-    <h2>Turning social into a sales channel, and a festival <em>activation on the ground</em></h2>
-    <div class="cols">
+        </div>
+      </div>
+    </article>
+    <article class="tile" id="footwear" data-seg="b2c">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-footwear">
+        <img class="thumb" src="img/ev-clog.webp" alt="" loading="lazy" width="720" height="480">
+        <span class="t-body"><span class="t-tag">Global footwear brand · Retail</span><span class="t-title">Social commerce and a festival activation</span><span class="t-stat">7.5x <small>ROAS</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-footwear" hidden>
+        <div class="p-top">
+          <img class="p-img" src="img/ev-clog.webp" alt="" loading="lazy">
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">Global footwear brand · Retail</p><h3>Social commerce and a festival activation</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">Turn social into a sales channel and give the brand a bigger place in youth culture.</p>
+            <ul class="pts"><li>Paid social on USD 4K a month, plus email, SMS and WhatsApp</li><li>Sunburn Holi sponsorship and on-ground activation</li><li>Store reopening campaign across 52 cities</li></ul>
+            <div class="p-nums"><div><strong>7.5x</strong><small>return on ad spend</small></div><div><strong>3.9x</strong><small>conversions year on year</small></div><div><strong>2x</strong><small>Instagram followers</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<div class="cols">
       <div>
         <h3>The brief</h3>
         <p>The brand team wanted digital channels to drive online sales and offline store presence while giving the brand a bigger place in youth culture through events and collaborations.</p>
       </div>
       <div>
-        <details class="dd" open><summary><h3>What I did</h3></summary><ul class="did">
+        <h3>What I did</h3>
+        <ul class="did">
           <li>Managed paid social on USD 4K a month, using conversion ads, product tags and geo-targeting around stores, and used tracking data to improve results month on month.</li>
           <li>Added email, SMS and WhatsApp campaigns to drive traffic and conversions.</li>
           <li>Ran a contest every month, plus celebrity and influencer collaborations.</li>
           <li>Helped build the next year's plan: a shift towards women aged 18–35, a focus on the six metro states that drove over half of engagement and sales, a three-phase budget for the brand-ambassador launch, and sponsorship of Holi events.</li>
           <li>Managed the brand's festival sponsorship and on-ground activation at Sunburn Holi, plus its online presence: pre-event teasers, hashtags and influencer copy, coverage during the event, and the social contest around it.</li>
           <li>Planned the post-COVID store reopening campaign across 52 cities.</li>
-        </ul></details>
+        </ul>
       </div>
     </div>
     <div class="ledger">
@@ -433,54 +549,40 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
       <figure><button type="button" data-cap="Brand on the main-stage screen during the festival"><img src="img/ev-screen.webp" alt="Brand logo on the main-stage LED screen with the DJ booth below" loading="lazy" width="1100" height="688"></button><figcaption>Main-stage branding</figcaption></figure>
       <figure><button type="button" data-cap="Pre-event teaser showing the stall design"><img src="img/ev-render.webp" alt="Teaser post: Sunburn it out, see you soon, with a render of the two-storey stall" loading="lazy" width="720" height="720"></button><figcaption>Pre-event teaser</figcaption></figure>
     </div>
-  </section>
-
-  <section class="case" id="fashion">
-    <div class="strip">
-      <span class="label">Slow-fashion label</span>
-      <span class="label"><i>Channels</i> Social, website &amp; SEO</span>
-    </div>
-    <h2>Marketing partner to a <em>sustainable clothing</em> label in India, the US and Singapore</h2>
-    <div class="cols">
-      <div>
-        <details class="dd" open><summary><h3>What I did</h3></summary><ul class="did">
-          <li>Led a full marketing audit of past activity and channel performance, then turned the findings into a marketing strategy that set which channels to invest in.</li>
-          <li>Planned and briefed the brand shoot for a new product line, creating the assets for its launch campaign.</li>
-          <li>Audited the e-commerce funnel, set up conversion tracking, and partnered with the brand's web team on UI/UX fixes to lift the conversion rate.</li>
-          <li>Planned and ran a seasonal campaign calendar for India, the US and Singapore, targeted at sustainable fashion, handloom and design audiences: summer launches, a winter collection, bestsellers, upcycled green gifting, a New Year push and a Singapore-only offer.</li>
-          <li>Managed our SEO partner through a six-month program to grow the site's organic search rankings.</li>
-        </ul></details>
+        </div>
       </div>
-    </div>
-    <div class="wall two">
-      <figure><button type="button" data-cap="US ad: Timeless and Classic"><img src="img/gen-fash1.webp" alt="Ad: Timeless and Classic, model in a white dress holding flowers" loading="lazy" width="1080" height="1080"></button><figcaption>US · summer ad</figcaption></figure>
-      <figure><button type="button" data-cap="New Year, Green Me campaign"><img src="img/gen-fash3.webp" alt="Ad: New Year, Green Me" loading="lazy" width="1080" height="1080"></button><figcaption>New Year campaign</figcaption></figure>
-      <figure><button type="button" data-cap="Green gifting: upcycled phone cases"><img src="img/gen-fash4.webp" alt="Ad: An upcycled story, consciously crafted upcycled phone cases" loading="lazy" width="1080" height="1080"></button><figcaption>Green gifting</figcaption></figure>
-      <figure><button type="button" data-cap="US ad: A Sweet, Slow Summer"><img src="img/gen-fash2.webp" alt="Ad: A Sweet, Slow Summer" loading="lazy" width="1080" height="1080"></button><figcaption>US · summer ad</figcaption></figure>
-    </div>
-  </section>
-
-  <!-- ================= Cloud storage partner GTM ================= -->
-  <section class="case" id="cloud">
-    <div class="strip">
-      <span class="label">US-based cloud storage company · partner program</span>
-      <span class="label"><i>Sector</i> Enterprise storage, B2B channel</span>
-      <span class="label"><i>Markets</i> UK, Netherlands, Germany</span>
-    </div>
-    <h2>Channel marketing: partner-funded lead generation for a <em>digital selling platform</em></h2>
-    <div class="cols">
+    </article>
+    <article class="tile" id="cloud" data-seg="b2b">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-cloud">
+        <img class="thumb" src="img/na-en1.webp" alt="" loading="lazy" width="720" height="480">
+        <span class="t-body"><span class="t-tag">Cloud storage company · Partners</span><span class="t-title">Partner-funded lead generation</span><span class="t-stat">6.7M <small>impressions</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-cloud" hidden>
+        <div class="p-top">
+          <img class="p-img" src="img/na-en1.webp" alt="" loading="lazy">
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">Cloud storage company · Partners</p><h3>Partner-funded lead generation</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">Drive leads for 15 partners through a co-branded assessment platform.</p>
+            <ul class="pts"><li>Google search playbook used across partners</li><li>Campaigns for UK and Dutch partners</li><li>Funnel analysis and A/B testing</li></ul>
+            <div class="p-nums"><div><strong>6.7M</strong><small>impressions</small></div><div><strong>64,103</strong><small>clicks</small></div><div><strong>79</strong><small>leads to partners</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<div class="cols">
       <div>
         <h3>The brief</h3>
         <p>About 80% of the company's business went through partners. Its new platform gave each partner a co-branded page with a three-minute, six-question assessment: a prospect answers, gets a product recommendation, and becomes a lead for that partner. Partners paid for the traffic from their own budgets, and our agency ran the campaigns for them. Fifteen partners in the UK, US, Netherlands, Germany and Ireland signed up to the program.</p>
       </div>
       <div>
-        <details class="dd" open><summary><h3>What I did</h3></summary><ul class="did">
+        <h3>What I did</h3>
+        <ul class="did">
           <li>Wrote the Google search campaign playbook used across partners: search split into service, competitor and brand campaigns over five ad groups; separate desktop and mobile display campaigns; and a 20:80 search-to-display split by impressions.</li>
           <li>Planned each partner's campaign: personas, budget, a click-to-lead forecast, and a LinkedIn test that ran multiple ads in month one and kept only the winner.</li>
           <li>Ran Google Ads campaigns for partners in the UK and the Netherlands, and used funnel analysis and conversion rate optimization to improve results, tracking each assessment step so we could see where people dropped off.</li>
           <li>Localized the partner campaign guide for different countries based on local sales insights.</li>
           <li>Designed the platform's partner pitch deck and scripted a two-minute explainer video for internal stakeholders.</li>
-        </ul></details>
+        </ul>
       </div>
     </div>
     <div class="ledger">
@@ -522,29 +624,40 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
       <figure><button type="button" data-cap="Display ad for end-user computing and VDI (logos removed)"><img src="img/na-en2.webp" alt="Display ad: Untether your workforce with simple, scalable EUC and VDI solutions" loading="lazy" width="1100" height="576"></button><figcaption>EUC &amp; VDI display ad</figcaption></figure>
       <figure><button type="button" data-cap="Retargeting ad: complete your assessment and contact us (logos removed)"><img src="img/na-en3.webp" alt="Retargeting ad: Find the right storage solution with our expert" loading="lazy" width="598" height="382"></button><figcaption>Retargeting ad</figcaption></figure>
     </div>
-  </section>
-
-  <!-- ================= Packaging films ================= -->
-  <section class="case" id="packaging">
-    <div class="strip">
-      <span class="label">Indian multinational conglomerate</span>
-      <span class="label"><i>Sector</i> Chemicals, packaging films, technical textiles</span>
-      <span class="label"><i>Role</i> Marketing partner</span>
-    </div>
-    <h2>Marketing partner to a multinational conglomerate: <em>website, brand films and global launches</em></h2>
-    <div class="cols">
+        </div>
+      </div>
+    </article>
+    <article class="tile" id="packaging" data-seg="b2b">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-packaging">
+        <img class="thumb" src="img/srf-plant.webp" alt="" loading="lazy" width="720" height="480">
+        <span class="t-body"><span class="t-tag">Multinational conglomerate · Manufacturing</span><span class="t-title">Website, brand films and plant launches</span><span class="t-stat">1.47M <small>impressions</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-packaging" hidden>
+        <div class="p-top">
+          <img class="p-img" src="img/srf-plant.webp" alt="" loading="lazy">
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">Multinational conglomerate · Manufacturing</p><h3>Website, brand films and plant launches</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">One marketing partner for the corporate brand, each business story and new launches.</p>
+            <ul class="pts"><li>Corporate website redesign, SEO and CMS</li><li>Brand films for each business</li><li>LinkedIn launches for plants in Hungary and Thailand</li></ul>
+            <div class="p-nums"><div><strong>1.47M</strong><small>impressions</small></div><div><strong>92%</strong><small>organic</small></div><div><strong>20.1K</strong><small>video views</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<div class="cols">
       <div>
         <h3>The brief</h3>
         <p>A multi-business group in chemicals, packaging films and technical textiles, with plants in five countries and customers in 90+, needed one partner for its corporate brand, each business's story and its new launches.</p>
       </div>
       <div>
-        <details class="dd" open><summary><h3>What I did</h3></summary><ul class="did">
+        <h3>What I did</h3>
+        <ul class="did">
           <li><b>Website:</b> redesigned the corporate site end to end, covering content, design and SEO, and built a CMS for it.</li>
           <li><b>Brand storytelling:</b> produced brand films for each business from script to final cut, plus marketing brochures.</li>
           <li><b>Go-to-market:</b> wrote the GTM strategy for new B2C products across the globe, and ran social campaigns for new business launches.</li>
           <li><b>Plant launches:</b> ran LinkedIn launch campaigns for the packaging films business's first plant in Europe (Hungary) and a new film line in Thailand: teasers, a countdown and the launch, a five-part series, leader and team videos, and target-buyer lists for both plants. Paid boosts were split into 70 campaigns across North America, South America, Southeast Asia and Europe.</li>
           <li><b>Employer brand and sustainability:</b> ran a video series on women in manufacturing, plus LinkedIn sustainability campaigns and Google and YouTube ads.</li>
-        </ul></details>
+        </ul>
       </div>
     </div>
     <div class="ledger">
@@ -573,29 +686,40 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
       <figure><button type="button" data-cap="Corporate website: full-width photo section from the specialty chemicals story"><img src="img/srf-web5.webp" alt="Website photo section: a scientist in a lab coat at a fume hood" loading="lazy" width="618" height="316"></button><figcaption>Website · photo section</figcaption></figure>
       <figure><button type="button" data-cap="Video series on women in manufacturing"><img src="img/srf-ihs.webp" alt="Video still: a woman engineer in a hard hat on a plant staircase, " loading="lazy" width="960" height="540"></button><figcaption>Women in manufacturing · video series</figcaption></figure>
     </div>
-  </section>
-
-  <!-- ================= Industrial ================= -->
-  <section class="case" id="industrial">
-    <div class="strip">
-      <span class="label">Global industrial equipment manufacturer</span>
-      <span class="label"><i>Sector</i> Industrial, B2B &amp; employer brand</span>
-      <span class="label"><i>Channels</i> Facebook, LinkedIn, Twitter, Instagram</span>
-    </div>
-    <h2>Always-on social for every business line, <em>measured against benchmarks</em></h2>
-    <div class="cols">
+        </div>
+      </div>
+    </article>
+    <article class="tile" id="industrial" data-seg="b2b">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-industrial">
+        <img class="thumb" src="img/gen-2030a.webp" alt="" loading="lazy" width="720" height="480">
+        <span class="t-body"><span class="t-tag">Industrial manufacturer</span><span class="t-title">Always-on social for every business line</span><span class="t-stat">2.4–3.9x <small>benchmark</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-industrial" hidden>
+        <div class="p-top">
+          <img class="p-img" src="img/gen-2030a.webp" alt="" loading="lazy">
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">Industrial manufacturer</p><h3>Always-on social for every business line</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">Give every business unit space in the same feeds while still growing the channels.</p>
+            <ul class="pts"><li>Benchmark study of 11 peers across 5 platforms</li><li>Monthly content mix by business unit</li><li>CSR, diversity and sustainability videos</li></ul>
+            <div class="p-nums"><div><strong>24.4%</strong><small>Facebook engagement</small></div><div><strong>6.2%</strong><small>LinkedIn engagement</small></div><div><strong>5.1%</strong><small>Twitter engagement</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<div class="cols">
       <div>
         <h3>The brief</h3>
         <p>Run the social channels of a global maker of compressors, power tools and air-conditioning systems. Every business unit, plus corporate and CSR, wanted space in the same feeds, and the channels still had to grow.</p>
       </div>
       <div>
-        <details class="dd" open><summary><h3>What I did</h3></summary><ul class="did">
+        <h3>What I did</h3>
+        <ul class="did">
           <li>Ran a competitive social benchmarking study of 11 global peers across 5 platforms, and turned it into voice, tone and platform recommendations.</li>
           <li>Allocated posts each month by business unit and content type, and tracked the content mix against a target ratio.</li>
           <li>Produced employer-brand stories, product launches, festival posts and consumer tip videos for the air-conditioning brand.</li>
           <li>Edited CSR films, a diversity video series, the 2030 sustainability commitments video and dealer-meet interviews.</li>
           <li>Sent monthly reports against engagement benchmarks, each ending with what to change next month.</li>
-        </ul></details>
+        </ul>
       </div>
     </div>
     <div class="ledger">
@@ -625,28 +749,77 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
       <figure><button type="button" data-cap="Consumer tips video for the air-conditioning brand"><img src="img/gen-ac.webp" alt="Video frame: the ideal thermostat range for comfort cooling and energy savings is between 24°C and 26°C" loading="lazy" width="1080" height="1080"></button><figcaption>AC tips · video series</figcaption></figure>
       <figure><button type="button" data-cap="2030 sustainability video, citizenship frame"><img src="img/gen-2030b.webp" alt="Animated video frame: citizenship, broaden community access to well-being services" loading="lazy" width="720" height="720"></button><figcaption>2030 sustainability video · citizenship</figcaption></figure>
     </div>
-  </section>
-
-  <!-- ================= HR consultancy ================= -->
-  <section class="case" id="hr">
-    <div class="strip">
-      <span class="label">HR assessment consultancy</span>
-      <span class="label"><i>Sector</i> HR consulting &amp; HR tech</span>
-      <span class="label"><i>Channels</i> LinkedIn, InMail, video, website</span>
+        </div>
+      </div>
+    </article>
+    <article class="tile" id="fashion" data-seg="b2c">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-fashion">
+        <img class="thumb" src="img/gen-fash1.webp" alt="" loading="lazy" width="720" height="480">
+        <span class="t-body"><span class="t-tag">Slow-fashion label</span><span class="t-title">Marketing partner across three markets</span><span class="t-stat">3 <small>markets</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-fashion" hidden>
+        <div class="p-top">
+          <img class="p-img" src="img/gen-fash1.webp" alt="" loading="lazy">
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">Slow-fashion label</p><h3>Marketing partner across three markets</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">Grow a sustainable clothing label in India, the US and Singapore.</p>
+            <ul class="pts"><li>Marketing audit and channel strategy</li><li>Seasonal campaign calendar for three markets</li><li>E-commerce funnel fixes and an SEO program</li></ul>
+            <div class="p-nums"><div><strong>3</strong><small>markets</small></div><div><strong>6-month</strong><small>SEO program</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<div class="cols">
+      <div>
+        <h3>What I did</h3>
+        <ul class="did">
+          <li>Led a full marketing audit of past activity and channel performance, then turned the findings into a marketing strategy that set which channels to invest in.</li>
+          <li>Planned and briefed the brand shoot for a new product line, creating the assets for its launch campaign.</li>
+          <li>Audited the e-commerce funnel, set up conversion tracking, and partnered with the brand's web team on UI/UX fixes to lift the conversion rate.</li>
+          <li>Planned and ran a seasonal campaign calendar for India, the US and Singapore, targeted at sustainable fashion, handloom and design audiences: summer launches, a winter collection, bestsellers, upcycled green gifting, a New Year push and a Singapore-only offer.</li>
+          <li>Managed our SEO partner through a six-month program to grow the site's organic search rankings.</li>
+        </ul>
+      </div>
     </div>
-    <h2>Thought leadership for HR leaders, then a <em>membership launch</em></h2>
-    <div class="cols">
+    <div class="wall two">
+      <figure><button type="button" data-cap="US ad: Timeless and Classic"><img src="img/gen-fash1.webp" alt="Ad: Timeless and Classic, model in a white dress holding flowers" loading="lazy" width="1080" height="1080"></button><figcaption>US · summer ad</figcaption></figure>
+      <figure><button type="button" data-cap="New Year, Green Me campaign"><img src="img/gen-fash3.webp" alt="Ad: New Year, Green Me" loading="lazy" width="1080" height="1080"></button><figcaption>New Year campaign</figcaption></figure>
+      <figure><button type="button" data-cap="Green gifting: upcycled phone cases"><img src="img/gen-fash4.webp" alt="Ad: An upcycled story, consciously crafted upcycled phone cases" loading="lazy" width="1080" height="1080"></button><figcaption>Green gifting</figcaption></figure>
+      <figure><button type="button" data-cap="US ad: A Sweet, Slow Summer"><img src="img/gen-fash2.webp" alt="Ad: A Sweet, Slow Summer" loading="lazy" width="1080" height="1080"></button><figcaption>US · summer ad</figcaption></figure>
+    </div>
+        </div>
+      </div>
+    </article>
+    <article class="tile" id="hr" data-seg="b2b">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-hr">
+        <img class="thumb" src="img/gen-hrinfo.webp" alt="" loading="lazy" width="720" height="480">
+        <span class="t-body"><span class="t-tag">HR consultancy</span><span class="t-title">LinkedIn thought leadership and a membership launch</span><span class="t-stat">191 <small>sign-ups</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-hr" hidden>
+        <div class="p-top">
+          <img class="p-img" src="img/gen-hrinfo.webp" alt="" loading="lazy">
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">HR consultancy</p><h3>LinkedIn thought leadership and a membership launch</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">Build a steady LinkedIn presence for HR leaders, then launch a paid membership in India, South Asia and Africa.</p>
+            <ul class="pts"><li>Infographics, post series and masterclass InMails</li><li>Vlog series and client case-study videos</li><li>Region-by-region membership launch campaigns</li></ul>
+            <div class="p-nums"><div><strong>487K</strong><small>impressions</small></div><div><strong>2,936</strong><small>clicks</small></div><div><strong>191</strong><small>member sign-ups</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<div class="cols">
       <div>
         <h3>The brief</h3>
         <p>The firm sells psychometric assessments and talent consulting to HR heads. They needed a steady presence on LinkedIn that showed expertise and filled masterclasses, and later launched a paid membership program for HR professionals in India, South Asia and Africa.</p>
       </div>
       <div>
-        <details class="dd" open><summary><h3>What I did</h3></summary><ul class="did">
+        <h3>What I did</h3>
+        <ul class="did">
           <li>Designed infographics and post series on hiring, potential assessment and career mobility, and wrote masterclass InMails.</li>
           <li>Edited a vlog series in-house: career-mapping explainers, client case-study videos and sales-assessment shorts.</li>
           <li>Briefed the website refresh around applying psychology in business rather than listing products.</li>
           <li>Ran the membership launch as separate campaigns per region, with leadership intro videos, a fireside chat and testimonial ads.</li>
-        </ul></details>
+        </ul>
       </div>
     </div>
     <div class="ledger">
@@ -664,126 +837,169 @@ dialog .close{position:absolute;top:8px;right:8px;background:#1A1D21;color:#E8E9
       <figure><button type="button" data-cap="Masterclass promotion creative"><img src="img/gen-master.webp" alt="Illustrated brain with a switch from rejected to accepted" loading="lazy" width="1100" height="902"></button><figcaption>Masterclass promotion</figcaption></figure>
       <figure><button type="button" data-cap="Engagement post: 'Do you think you are intelligent?' puzzle"><img src="img/gen-intel.webp" alt="Puzzle post asking how many handshakes 12 board members make" loading="lazy" width="1100" height="576"></button><figcaption>Engagement puzzle post</figcaption></figure>
     </div>
-  </section>
-
-
-  <!-- ================= compact cases ================= -->
-  <div class="smallcases">
-
-
-    <section class="case" id="network">
-      <div class="strip">
-        <span class="label">Executive network &amp; research firm</span>
-        <span class="label"><i>Channels</i> Twitter, LinkedIn, web analytics</span>
+        </div>
       </div>
-      <h2>Restarting Twitter and <em>tracking sign-ups</em></h2>
-      <p>Audited the firm's Twitter presence against research firms and C-suite forums; it ranked last on followers and had not posted in eight months. Wrote a five-step plan for posting habits, listening and pinned content, built the monthly social calendar, installed the right trackers and set them up for conversions.</p>
+    </article>
+    <article class="tile" id="network" data-seg="b2b">
+      <button class="tile-head" type="button" aria-expanded="false" aria-controls="p-network">
+        <span class="thumb ph" aria-hidden="true">Twitter relaunch</span>
+        <span class="t-body"><span class="t-tag">Executive network</span><span class="t-title">Restarting Twitter and tracking sign-ups</span><span class="t-stat">6,118 <small>site sessions</small></span><span class="t-open">Open +</span></span>
+      </button>
+      <div class="panel" id="p-network" hidden>
+        <div class="p-top">
+          
+          <div class="p-text">
+            <div class="p-head"><div><p class="t-tag">Executive network</p><h3>Restarting Twitter and tracking sign-ups</h3></div><button class="close" type="button" aria-label="Close">×</button></div>
+            <p class="brief">Restart a Twitter account that had not posted in eight months and connect it to registrations.</p>
+            <ul class="pts"><li>Audit against research firms and C-suite forums</li><li>Five-step plan for posting, listening and pinned content</li><li>Tracking set up for conversions</li></ul>
+            <div class="p-nums"><div><strong>6,118</strong><small>sessions in five weeks</small></div><div><strong>164</strong><small>registrations</small></div></div>
+            <button class="more" type="button" aria-expanded="false">See more</button>
+          </div>
+        </div>
+        <div class="p-more" hidden>
+<p>Audited the firm's Twitter presence against research firms and C-suite forums; it ranked last on followers and had not posted in eight months. Wrote a five-step plan for posting habits, listening and pinned content, built the monthly social calendar, installed the right trackers and set them up for conversions.</p>
       <div class="ledger">
         <div class="metrics">
           <div class="metric"><strong class="num">6,118</strong><small>website sessions in five weeks</small></div>
           <div class="metric"><strong class="num">164</strong><small>registrations in the same period</small></div>
         </div>
       </div>
-    </section>
-
+        </div>
+      </div>
+    </article>
   </div>
+  <p class="label" style="text-transform:none;letter-spacing:0;font-size:13px">Client names are withheld. Agency-era figures come from platform exports and client reports for the periods shown.</p>
+</section>
 
-  <!-- ================= Method ================= -->
-  <section class="case" id="method">
-    <div class="strip"><span class="label">How I work</span></div>
-    <h2>Understand the business, <em>build the strategy</em>, make the data work</h2>
-    <div class="method">
-      <article>
-        <h3>1 · Understand the business</h3>
-        <p>Every plan starts with what the business needs to win: pipeline in target accounts, a product launch, footfall in stores. I run brand positioning, ideal customer profile and persona workshops with clients and account teams before planning begins.</p>
-      </article>
-      <article>
-        <h3>2 · Build and run the strategy</h3>
-        <p>I turn that into a channel plan and run it end to end, across ABM, paid media, content, events and influencers. When speed matters, I make the creative in-house: static posts, infographics, ads in every size and video edits.</p>
-        <p class="q">Adobe Creative Suite · Figma · Canva · PlayPlay</p>
-      </article>
-      <article>
-        <h3>3 · Read the data and make it work</h3>
-        <p>I track every step, compare each channel against a benchmark and change what isn't working mid-campaign. For a food-franchise client, analyzing ad exports in Python showed that a frequency of 2–3, video, and an 8 pm to midnight search slot performed best. Budgets moved to match.</p>
-        <p class="q">Salesforce · Marketo · HubSpot · Demandbase · 6sense · Adobe Analytics · Google Analytics · Tag Manager</p>
-      </article>
-    </div>
-  </section>
+<section class="sec" id="approach">
+  <h2>How I work</h2>
+  <div class="cards how">
+    <div class="card"><span class="step">1</span><h3>Understand the business</h3>
+      <p class="roles">Every plan starts with what the business needs to win: pipeline in target accounts, a launch, footfall in stores. I run positioning, ICP and persona workshops before planning begins.</p></div>
+    <div class="card"><span class="step">2</span><h3>Build and run the strategy</h3>
+      <p class="roles">I turn that into a channel plan across ABM, paid media, content, events and influencers, and run it end to end. When speed matters, I make the creative in-house.</p>
+      <p class="sum">Adobe Creative Suite · Figma · Canva · PlayPlay</p></div>
+    <div class="card"><span class="step">3</span><h3>Make the data work</h3>
+      <p class="roles">I track every step against a benchmark and change what isn't working mid-campaign. For a food-franchise client, Python analysis of ad exports moved budget to the best frequency, format and time slot.</p>
+      <p class="sum">Salesforce · HubSpot · 6sense · Adobe Analytics · Google Analytics</p></div>
+  </div>
+</section>
 
-  <!-- ================= CV ================= -->
-  <section class="case" id="cv">
-    <div class="strip"><span class="label">Experience</span></div>
-    <div class="cv">
-      <div class="timeline">
-        <div><span>2023 – 2026</span><p><b>Wipro</b><i class="prog">Marketing Manager · May 2024 – May 2026<br>Campaign Specialist · Jan 2023 – May 2024</i><small>India-based, covering GCC, Americas, Europe and APMEA markets. ABM, go-to-market, demand generation, events and executive thought leadership.</small></p></div>
-        <div><span>2018 – 2023</span><p><b>Inception Business Services</b><i class="prog">Marketing Project Director · Aug 2021 – Jan 2023<br>Senior Marketing Project Manager · Jul 2020 – Aug 2021<br>Marketing Project Manager · Apr 2018 – Jul 2020</i><small>Marketing and advertising firm, India. Business development, brand and persona workshops, integrated campaigns, teams of up to 10. Clients in India, Europe, the US and the UAE.</small></p></div>
-        <div><span>2016 – 2018</span><p><b>MBA, Marketing · Symbiosis International University</b></p></div>
-        <div><span>2014 – 2016</span><p><b>Client Tech Support Senior Associate · Dell International Services</b></p></div>
-        <div><span>2012 – 2014</span><p><b>Product Support Engineer · HCL Technologies</b></p></div>
-        <div><span>2008 – 2012</span><p><b>B.Tech, Information Technology · CSJMU</b></p></div>
-      </div>
-      <div class="cvside">
-        <div>
-          <h3 class="label" style="margin-bottom:12px">Core skills</h3>
-          <div class="skills">
-            <div><h4>Strategy</h4><ul><li>Marketing strategy &amp; planning</li><li>Go-to-market (GTM) strategy</li><li>Brand strategy &amp; positioning</li><li>B2B &amp; enterprise marketing</li></ul></div>
-            <div><h4>Pipeline</h4><ul><li>Account-based marketing (ABM)</li><li>Demand generation</li><li>Channel &amp; partner marketing</li><li>Sales enablement</li></ul></div>
-            <div><h4>Channels</h4><ul><li>Event, field &amp; experiential</li><li>Digital &amp; performance marketing</li><li>Social media &amp; content</li><li>Executive thought leadership</li></ul></div>
-            <div><h4>Operations</h4><ul><li>Marketing analytics</li><li>CRM &amp; marketing automation</li><li>Agency &amp; vendor management</li><li>Generative AI tools</li></ul></div>
-          </div>
-        </div>
-        <div>
-          <h3 class="label" style="margin-bottom:10px">Tools</h3>
-          <p class="tools">Salesforce · 6sense · Demandbase · HubSpot &amp; HubSpot CRM · Marketo · Adobe Analytics · Google Analytics · Google Tag Manager · Meta, LinkedIn, TikTok &amp; Quora ads · Sprout Social · Brandwatch · Meltwater · Mailchimp · Poppulo · Adobe Creative Suite · Figma · Canva · PlayPlay · Microsoft 365 Copilot</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="sec" id="experience">
+  <h2>Experience</h2>
+  <div class="cards">
+    <div class="card"><span class="when">Jan 2023 – May 2026 · India, global markets</span><h3>Wipro</h3>
+      <p class="roles"><b>Marketing Manager</b> · May 2024 – May 2026<br>Campaign Specialist · Jan 2023 – May 2024</p>
+      <p class="sum">ABM, demand generation, global events and executive thought leadership across the GCC, Americas, Europe and APMEA.</p></div>
+    <div class="card"><span class="when">Apr 2018 – Jan 2023 · Marketing agency, India</span><h3>Inception Business Services</h3>
+      <p class="roles"><b>Marketing Project Director</b> · Aug 2021 – Jan 2023<br>Senior Marketing Project Manager · Jul 2020 – Aug 2021<br>Marketing Project Manager · Apr 2018 – Jul 2020</p>
+      <p class="sum">30% of agency revenue from my accounts, teams of up to 10, clients in India, Europe, the US and the UAE.</p>
+      <details><summary>What I did there +</summary><ul class="did">
+      <li><b>Business development:</b> brought in new clients with pitches, proposals and strategic recommendations.</li>
+      <li><b>Delivery:</b> turned client briefs into campaign plans and monthly deliverables, managing teams across project management, campaign management, research and creative.</li>
+      <li><b>Brand strategy:</b> ran positioning, voice-and-tone, value-proposition and ideal customer profile (ICP) workshops for a school franchise group, fashion and footwear brands, a law firm and an executive search firm; built guidelines, buyer personas and decision journeys, and acted as brand guardian across all deliverables.</li>
+      <li><b>Campaigns:</b> online and offline campaigns, brand and product launches, collaborations and events, paid media, influencer marketing, content and SEO strategy across clients.</li>
+      <li><b>Analytics:</b> tracked campaigns with analytics and social tools to improve results month on month.</li>
+      <li><b>Sales enablement:</b> company profiles, leadership profiles, case studies and proposals for UAE clients.</li>
+    </ul></details></div>
+    <div class="card muted"><span class="when">Oct 2012 – May 2016 · India</span><h3>Dell · HCL Technologies</h3>
+      <p class="roles"><b>Client Tech Support Senior Associate</b> · Dell<br>Product Support Engineer · HCL</p>
+      <p class="sum">Customer-facing technical support before moving into marketing.</p></div>
+  </div>
+</section>
 
-  <section class="case closing" id="contact">
-    <div class="strip"><span class="label">Next role</span></div>
-    <h2>Open to marketing manager and senior marketing roles <em>in the UAE</em></h2>
-    <div class="actions" style="margin-top:0">
-      <a class="btn" href="mailto:harun.marwaha91@gmail.com">Email me</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/harunmarwaha" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn ghost" href="Harun_Marwaha_Resume.pdf" download>Download resume (PDF)</a>
-    </div>
-    <p class="contact-line"><span id="em">harun.marwaha91@gmail.com</span> <button class="copy" type="button" id="copyEmail">Copy</button></p>
-  </section>
+<section class="sec" id="education">
+  <h2>Education</h2>
+  <div class="edu">
+    <div><span class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+      <span><h3>MBA, Marketing</h3><p>Symbiosis International University</p><small>2016 – 2018</small></span></div>
+    <div><span class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+      <span><h3>B.Tech, Information Technology</h3><p>CSJMU, India</p><small>2008 – 2012</small></span></div>
+  </div>
+</section>
 
-  </main>
-</div>
+<section class="sec" id="skills">
+  <h2>Skills</h2>
+  <div class="skills4">
+    <div><h3>Strategy</h3><ul><li>Marketing strategy &amp; planning</li><li>Go-to-market (GTM) strategy</li><li>Brand strategy &amp; positioning</li><li>B2B &amp; enterprise marketing</li></ul></div>
+    <div><h3>Pipeline</h3><ul><li>Account-based marketing (ABM)</li><li>Demand generation</li><li>Channel &amp; partner marketing</li><li>Sales enablement</li></ul></div>
+    <div><h3>Channels</h3><ul><li>Event, field &amp; experiential</li><li>Digital &amp; performance marketing</li><li>Social media &amp; content</li><li>Executive thought leadership</li></ul></div>
+    <div><h3>Operations</h3><ul><li>Marketing analytics</li><li>CRM &amp; marketing automation</li><li>Agency &amp; vendor management</li><li>Generative AI tools</li></ul></div>
+  </div>
+  <p class="tools"><b>Tools:</b> Salesforce · 6sense · Demandbase · HubSpot &amp; HubSpot CRM · Marketo · Adobe Analytics · Google Analytics · Google Tag Manager · Meta, LinkedIn, TikTok &amp; Quora ads · Sprout Social · Brandwatch · Meltwater · Mailchimp · Poppulo · Adobe Creative Suite · Figma · Canva · PlayPlay · Microsoft 365 Copilot</p>
+</section>
+
+<section class="band" id="contact">
+  <h2>Hiring a marketing manager in the UAE?</h2>
+  <div class="actions">
+    <a class="btn" href="mailto:harun.marwaha91@gmail.com">Email me</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/harunmarwaha" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="Harun_Marwaha_Resume.pdf" download>Download resume</a>
+  </div>
+  <p><span id="em">harun.marwaha91@gmail.com</span> <button class="copy" type="button" id="copyEmail">Copy</button></p>
+</section>
 
 <footer>
-  <span>Harun Marwaha · Dubai, UAE · harun.marwaha91@gmail.com</span>
-  <span>Client names are withheld. Agency-era figures come from platform exports and client reports for the periods shown.</span>
+  <span>Harun Marwaha · Dubai, UAE</span>
+  <span>Client names are withheld.</span>
 </footer>
 </div>
 
 <dialog id="lb" aria-label="Enlarged image">
-  <button class="close" type="button" id="lbClose">Close</button>
+  <button class="close" type="button" id="lbClose" aria-label="Close">×</button>
   <img id="lbImg" alt="">
   <p id="lbCap"></p>
 </dialog>
 
 <script>
 (function(){
+  var tiles=[].slice.call(document.querySelectorAll('.tile'));
+  function closeTile(t){
+    t.classList.remove('open');
+    t.querySelector('.panel').hidden=true;
+    t.querySelector('.tile-head').setAttribute('aria-expanded','false');
+    var m=t.querySelector('.p-more'),b=t.querySelector('.more');
+    m.hidden=true;b.setAttribute('aria-expanded','false');b.textContent='See more';
+  }
+  function openTile(t,scroll){
+    tiles.forEach(function(o){if(o!==t)closeTile(o);});
+    t.classList.add('open');
+    t.querySelector('.panel').hidden=false;
+    t.querySelector('.tile-head').setAttribute('aria-expanded','true');
+    if(scroll)t.scrollIntoView({behavior:'smooth',block:'start'});
+    t.querySelector('.close').focus({preventScroll:true});
+    if(history.replaceState)history.replaceState(null,'','#'+t.id);
+  }
+  tiles.forEach(function(t){
+    t.querySelector('.tile-head').addEventListener('click',function(){openTile(t,true);});
+    t.querySelector('.close').addEventListener('click',function(){
+      closeTile(t);t.querySelector('.tile-head').focus();
+      if(history.replaceState)history.replaceState(null,'','#work');
+    });
+    var b=t.querySelector('.more'),m=t.querySelector('.p-more');
+    b.addEventListener('click',function(){
+      var show=m.hidden;m.hidden=!show;b.setAttribute('aria-expanded',show?'true':'false');b.textContent=show?'See less':'See more';
+    });
+  });
+  document.querySelectorAll('.filters button').forEach(function(f){
+    f.addEventListener('click',function(){
+      var v=f.getAttribute('data-f');
+      document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed',x===f?'true':'false');});
+      tiles.forEach(function(t){var show=(v==='all'||t.getAttribute('data-seg')===v);if(!show)closeTile(t);t.hidden=!show;});
+    });
+  });
+  function fromHash(){var id=location.hash.slice(1);var t=id&&document.getElementById(id);if(t&&t.classList.contains('tile'))openTile(t,true);}
+  fromHash();window.addEventListener('hashchange',fromHash);
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
   document.querySelectorAll('button[data-cap]').forEach(function(b){
-    b.addEventListener('click',function(){
-      var i=b.querySelector('img'); img.src=i.src; img.alt=i.alt; cap.textContent=b.getAttribute('data-cap');
-      if(lb.showModal){lb.showModal();}
-    });
+    b.addEventListener('click',function(){var i=b.querySelector('img');img.src=i.src;img.alt=i.alt;cap.textContent=b.getAttribute('data-cap');if(lb.showModal)lb.showModal();});
   });
   document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
   lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
-  if(window.matchMedia&&matchMedia('(max-width:720px)').matches){
-    document.querySelectorAll('details.dd').forEach(function(d){d.removeAttribute('open');});
-  }
   var c=document.getElementById('copyEmail');
   c.addEventListener('click',function(){
     var t='harun.marwaha91@gmail.com';
-    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('em'));var s=getSelection();s.removeAllRanges();s.addRange(r);c.textContent='Selected, press copy';}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('em'));var s=getSelection();s.removeAllRanges();s.addRange(r);c.textContent='Selected';}
     try{navigator.clipboard.writeText(t).then(function(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy';},1800);},sel);}catch(e){sel();}
   });
 })();
