@@ -362,6 +362,37 @@ footer{margin-top:40px}
   .band{padding:28px}
   .hero3 .actions .btn{flex:1 1 0;padding:0 12px}
 }
+
+.xp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.xcard{background:var(--surface);border-radius:12px;border-top:4px solid var(--accent);min-width:0;scroll-margin-top:84px}
+.xcard.muted{border-top-color:var(--rule)}
+.x-main{padding:24px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box}
+.x-main h3{font:700 21px var(--f-display)}
+.xbtn{align-self:flex-start;margin-top:auto;min-height:42px;padding:0 16px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);font:600 14px var(--f-body);border-radius:2px;cursor:pointer}
+.xbtn:hover{background:var(--accent);color:var(--accent-ink)}
+.xcard.open{grid-column:1/-1;display:grid;grid-template-columns:minmax(240px,320px) minmax(0,1fr);border:2px solid var(--accent);border-top-width:4px}
+.xcard.open .xbtn{display:none}
+.xcard.open .x-main{border-right:1px solid var(--rule)}
+.x-more{padding:24px;display:flex;flex-direction:column;gap:14px}
+.x-more[hidden]{display:none}
+.xcard .when{font-size:13px;font-weight:600;color:var(--muted)}
+.xcard .roles{font-size:15px;line-height:1.6}
+.xcard .roles b{font-weight:700}
+.xcard .sum{font-size:14px;color:var(--muted)}
+.x-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.xpts{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.xpts li{background:var(--bg);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;font-size:14.5px;line-height:1.5}
+.xpts b{font:700 15px var(--f-display);color:var(--accent)}
+@media (max-width:960px){
+  .xp{grid-template-columns:minmax(0,1fr)}
+  .xcard.open{grid-template-columns:minmax(0,1fr)}
+  .xcard.open .x-main{border-right:0;border-bottom:1px solid var(--rule)}
+  .xpts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .xpts{grid-template-columns:minmax(0,1fr)}
+  .x-main,.x-more{padding:20px}
+}
 </style>
 </head>
 <body>
@@ -369,12 +400,12 @@ footer{margin-top:40px}
   <div class="in">
     <a class="brand" href="#top">Harun Marwaha</a>
     <nav class="topnav" aria-label="Sections">
-      <a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <a href="#experience">Experience</a><a href="#work">Work</a><a href="#approach">Approach</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
       <a class="btn" href="Harun_Marwaha_Resume.pdf" download>Resume</a>
     </nav>
     <a class="btn pill-resume" href="Harun_Marwaha_Resume.pdf" download>Resume</a>
   </div>
-  <nav class="pills" aria-label="Sections"><a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+  <nav class="pills" aria-label="Sections"><a href="#experience">Experience</a><a href="#work">Work</a><a href="#approach">Approach</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
 </header>
 
 <div class="wrap" id="top">
@@ -397,6 +428,27 @@ footer{margin-top:40px}
   <div><strong>USD 700M+</strong><small>deal wins supported with ABM</small></div>
   <div><strong>7.5x</strong><small>return on ad spend, footwear brand</small></div>
   <div><strong>30%</strong><small>of agency revenue from my accounts</small></div>
+</section>
+
+<section class="sec" id="experience">
+  <h2>Experience</h2>
+  <div class="xp">
+    <article class="xcard" id="xp-wipro">
+      <div class="x-main"><span class="when">Jan 2023 – May 2026 · India, global markets</span><h3>Wipro</h3>
+        <p class="roles"><b>Marketing Manager</b> · May 2024 – May 2026<br>Campaign Specialist · Jan 2023 – May 2024</p>
+        <p class="sum">ABM, demand generation, global events and executive thought leadership across the GCC, Americas, Europe and APMEA.</p><button class="xbtn" type="button" aria-expanded="false" aria-controls="xp-wipro-more">What I did there +</button></div><div class="x-more" id="xp-wipro-more" hidden><div class="x-head"><p class="t-tag">What I did at Wipro</p><button class="close x-close" type="button" aria-label="Close">×</button></div><ul class="xpts"><li><b>ABM &amp; sales enablement</b><span>ABM and go-to-market plans with GCC account managers for hunting and farming accounts, including a pursuit plan for one of the GCC's largest energy and chemicals producers.</span></li><li><b>Demand generation</b><span>Multi-channel programs across paid, owned and earned channels that contributed USD 100M in qualified pipeline.</span></li><li><b>Events</b><span>Davos, MWC Barcelona (two editions), CES, AWS re:Invent and the India AI Impact Summit, plus webinars and closed-door leadership panels.</span></li><li><b>Paid media &amp; LinkedIn</b><span>300+ campaigns across seven industries for director-level audiences, localized for each region; CTR up 20%, CPL down USD 200.</span></li><li><b>Content &amp; social</b><span>C-suite thought leadership, the content calendar and a global social media framework, plus social listening and monthly reporting.</span></li><li><b>Operations &amp; AI</b><span>Annual plan and governance, agency management, launch time cut from four days to under 24 hours, Microsoft 365 Copilot in the workflow.</span></li></ul></div>
+    </article>
+    <article class="xcard" id="xp-inception">
+      <div class="x-main"><span class="when">Apr 2018 – Jan 2023 · Marketing agency, India</span><h3>Inception Business Services</h3>
+        <p class="roles"><b>Marketing Project Director</b> · Aug 2021 – Jan 2023<br>Senior Marketing Project Manager · Jul 2020 – Aug 2021<br>Marketing Project Manager · Apr 2018 – Jul 2020</p>
+        <p class="sum">30% of agency revenue from my accounts, teams of up to 10, clients in India, Europe, the US and the UAE.</p><button class="xbtn" type="button" aria-expanded="false" aria-controls="xp-inception-more">What I did there +</button></div><div class="x-more" id="xp-inception-more" hidden><div class="x-head"><p class="t-tag">What I did at Inception Business Services</p><button class="close x-close" type="button" aria-label="Close">×</button></div><ul class="xpts"><li><b>Business development</b><span>Brought in new clients with pitches, proposals and strategic recommendations.</span></li><li><b>Delivery</b><span>Turned client briefs into campaign plans and monthly deliverables, managing teams across project management, campaign management, research and creative.</span></li><li><b>Brand strategy</b><span>Positioning, voice-and-tone, value-proposition and ICP workshops for education, fashion, footwear, legal and executive search clients; guidelines, buyer personas and decision journeys.</span></li><li><b>Campaigns</b><span>Online and offline campaigns, brand and product launches, collaborations and events, paid media, influencer marketing, content and SEO.</span></li><li><b>Analytics</b><span>Tracked campaigns with analytics and social tools to improve results month on month.</span></li><li><b>Sales enablement</b><span>Company profiles, leadership profiles, case studies and proposals for UAE clients.</span></li></ul></div>
+    </article>
+    <article class="xcard muted" id="xp-early">
+      <div class="x-main"><span class="when">Oct 2012 – May 2016 · India</span><h3>Dell · HCL Technologies</h3>
+        <p class="roles"><b>Client Tech Support Senior Associate</b> · Dell<br>Product Support Engineer · HCL</p>
+        <p class="sum">Customer-facing technical support before moving into marketing.</p></div>
+    </article>
+  </div>
 </section>
 
 <section class="sec" id="work">
@@ -885,29 +937,6 @@ footer{margin-top:40px}
   </div>
 </section>
 
-<section class="sec" id="experience">
-  <h2>Experience</h2>
-  <div class="cards">
-    <div class="card"><span class="when">Jan 2023 – May 2026 · India, global markets</span><h3>Wipro</h3>
-      <p class="roles"><b>Marketing Manager</b> · May 2024 – May 2026<br>Campaign Specialist · Jan 2023 – May 2024</p>
-      <p class="sum">ABM, demand generation, global events and executive thought leadership across the GCC, Americas, Europe and APMEA.</p></div>
-    <div class="card"><span class="when">Apr 2018 – Jan 2023 · Marketing agency, India</span><h3>Inception Business Services</h3>
-      <p class="roles"><b>Marketing Project Director</b> · Aug 2021 – Jan 2023<br>Senior Marketing Project Manager · Jul 2020 – Aug 2021<br>Marketing Project Manager · Apr 2018 – Jul 2020</p>
-      <p class="sum">30% of agency revenue from my accounts, teams of up to 10, clients in India, Europe, the US and the UAE.</p>
-      <details><summary>What I did there +</summary><ul class="did">
-      <li><b>Business development:</b> brought in new clients with pitches, proposals and strategic recommendations.</li>
-      <li><b>Delivery:</b> turned client briefs into campaign plans and monthly deliverables, managing teams across project management, campaign management, research and creative.</li>
-      <li><b>Brand strategy:</b> ran positioning, voice-and-tone, value-proposition and ideal customer profile (ICP) workshops for a school franchise group, fashion and footwear brands, a law firm and an executive search firm; built guidelines, buyer personas and decision journeys, and acted as brand guardian across all deliverables.</li>
-      <li><b>Campaigns:</b> online and offline campaigns, brand and product launches, collaborations and events, paid media, influencer marketing, content and SEO strategy across clients.</li>
-      <li><b>Analytics:</b> tracked campaigns with analytics and social tools to improve results month on month.</li>
-      <li><b>Sales enablement:</b> company profiles, leadership profiles, case studies and proposals for UAE clients.</li>
-    </ul></details></div>
-    <div class="card muted"><span class="when">Oct 2012 – May 2016 · India</span><h3>Dell · HCL Technologies</h3>
-      <p class="roles"><b>Client Tech Support Senior Associate</b> · Dell<br>Product Support Engineer · HCL</p>
-      <p class="sum">Customer-facing technical support before moving into marketing.</p></div>
-  </div>
-</section>
-
 <section class="sec" id="education">
   <h2>Education</h2>
   <div class="edu">
@@ -990,6 +1019,18 @@ footer{margin-top:40px}
   });
   function fromHash(){var id=location.hash.slice(1);var t=id&&document.getElementById(id);if(t&&t.classList.contains('tile'))openTile(t,true);}
   fromHash();window.addEventListener('hashchange',fromHash);
+  [].slice.call(document.querySelectorAll('.xcard')).forEach(function(c,_,all){
+    var b=c.querySelector('.xbtn'),m=c.querySelector('.x-more');
+    if(!b)return;
+    function close(x){x.classList.remove('open');var mm=x.querySelector('.x-more');if(mm)mm.hidden=true;var bb=x.querySelector('.xbtn');if(bb)bb.setAttribute('aria-expanded','false');}
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.xcard.open').forEach(close);
+      c.classList.add('open');m.hidden=false;b.setAttribute('aria-expanded','true');
+      c.scrollIntoView({behavior:'smooth',block:'start'});
+      c.querySelector('.x-close').focus({preventScroll:true});
+    });
+    c.querySelector('.x-close').addEventListener('click',function(){close(c);b.focus();});
+  });
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
   document.querySelectorAll('button[data-cap]').forEach(function(b){
     b.addEventListener('click',function(){var i=b.querySelector('img');img.src=i.src;img.alt=i.alt;cap.textContent=b.getAttribute('data-cap');if(lb.showModal)lb.showModal();});
